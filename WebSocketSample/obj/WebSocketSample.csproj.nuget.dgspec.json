@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\WebSocketSample\\WebSocketSample\\WebSocketSample.csproj": {}
+    "C:\\Projects\\Motorolla\\SimpleWebsocket\\WebSocketSample\\WebSocketSample.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\WebSocketSample\\WebSocketSample\\WebSocketSample.csproj": {
+    "C:\\Projects\\Motorolla\\SimpleWebsocket\\WebSocketSample\\WebSocketSample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\WebSocketSample\\WebSocketSample\\WebSocketSample.csproj",
+        "projectUniqueName": "C:\\Projects\\Motorolla\\SimpleWebsocket\\WebSocketSample\\WebSocketSample.csproj",
         "projectName": "WebSocketSample",
-        "projectPath": "C:\\Projects\\WebSocketSample\\WebSocketSample\\WebSocketSample.csproj",
-        "packagesPath": "C:\\Users\\gpcf76\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\WebSocketSample\\WebSocketSample\\obj\\",
+        "projectPath": "C:\\Projects\\Motorolla\\SimpleWebsocket\\WebSocketSample\\WebSocketSample.csproj",
+        "packagesPath": "C:\\Users\\samqt\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Motorolla\\SimpleWebsocket\\WebSocketSample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\gpcf76\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\samqt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/msi-cie/_packaging/EvidenceLibrary-Libraries/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/msi-cie/_packaging/vsa-device-management%40Local/nuget/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

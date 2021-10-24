@@ -53,12 +53,12 @@ namespace WebSocketSample.Controllers
                         _logger.LogDebug("Received Text: {0}", content);
                         break;
                     case WebSocketMessageType.Close:
-                        _logger.LogDebug("Closing websocket...");
+                        _logger.LogDebug($"{DateTime.Now} Closing websocket...");
                         break;
                 }
             }
 
-            
+            _logger.LogWarning($"{DateTime.Now} Websocket has closed : {webSocket.State}");
         }
 
         [HttpGet("Status")]
@@ -70,6 +70,17 @@ namespace WebSocketSample.Controllers
             });
         }
 
+        [HttpGet("Ping")]
+        public async Task<IActionResult> Ping()
+        {
+            var msgBytes = Encoding.UTF8.GetBytes("Are you there");
+            await webSocket.SendAsync(new ArraySegment<byte>(msgBytes, 0, msgBytes.Length), 
+                WebSocketMessageType.Text, 
+                true, 
+                CancellationToken.None);
+            return Ok();
+        }
+
         private static byte[] TrimMessage(IReadOnlyList<byte> bytes)
         {
             var i = bytes.Count - 1;
@@ -79,17 +90,6 @@ namespace WebSocketSample.Controllers
             }
 
             return bytes.Take(i + 1).ToArray();
-        }
-
-        private void RefreshDeviceConnectionStatus(object? state)
-        {
-            _logger.LogDebug(" -------------- Checking Websocket Connection -------------- ");
-
-            if (webSocket == null)
-                _logger.LogDebug("Websocket is null");
-            else
-                _logger.LogDebug($"Websocket state : {webSocket.State}");
-            _logger.LogDebug(" ----------------------------------------------------------- ");
         }
     }
 }
